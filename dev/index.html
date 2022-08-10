@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;my-element> Demo</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="../my-element.js"></script>
+    <script type="module" src="../componentes/mis-propiedades/mis-propiedades.js"></script>
+    <script type="module" src="../componentes/simple-greeting/SimpleGreeting.js"></script>
+    <script type="module" src="../componentes/plantillas/Plantillas.js"></script>
+    <script type="module" src="../componentes/plantillas/Condicionales.js"></script>
+    <script type="module" src="../componentes/plantillas/When.js"></script>
+    <script type="module" src="../componentes/plantillas/Choose.js"></script>
+    <script type="module" src="../componentes/plantillas/Bucle.js"></script>
+    <script type="module" src="../componentes/plantillas/Repeat.js"></script>
+    <script type="module" src="../componentes/plantillas/Join.js"></script>
+    <script type="module" src="../componentes/plantillas/Range.js"></script>
+    <script type="module" src="../componentes/plantillas/SlotSimple.js"></script>
+    <script type="module" src="../componentes/plantillas/SlotComplejo.js"></script>
+    <script type="module" src="../componentes/plantillas/OtroSlotComplejo.js"></script>
+    <script type="module" src="../componentes/plantillas/DirectivasDefault.js"></script>
+    <script type="module" src="../componentes/plantillas/MisCondiciones.js"></script>
+    <script type="module" src="../componentes/plantillas/Milistado.js"></script>
+    <script type="module" src="../componentes/plantillas/MiSlotChachi.js"></script>
+    <script type="module" src="../componentes/lifecycle/mis-ciclos-de-vida.js"></script>
+    <script type="module" src="../componentes/eventos/mis-eventos.js"></script>
+    <script type="module" src="../componentes/eventos/mis-eventos-constructor.js"></script>
+    <script type="module" src="../componentes/eventos/mis-eventos-personalizados.js"></script>
+    <script type="module" src="../componentes/eventos/mis-eventos-personalizados-captura.js"></script>
+    <script type="module" src="../componentes/eventos/evento-constructor-cap.js"></script>
+    <script type="module" src="../componentes/eventos/evento-constructor.js"></script>
+    <script type="module" src="../componentes/estilos/MisEstilos.js"></script>
+    <script type="module" src="../componentes/estilos/CargaEstilos.js"></script>
+    <script type="module" src="../componentes/estilos/MiShadowDOM.js"></script>
+    <script type="module" src="../componentes/estilos/MisEstilosSlots.js"></script>
+    <script type="module" src="../componentes/estilos/Madre.js"></script>
+    <script type="module" src="../componentes/estilos/Hija.js"></script>
+    <script type="module" src="../componentes/estilos/MisVariables.js"></script>
+    <script type="module" src="../componentes/estilos/CssShadowDom.js"></script>
+    <script type="module" src="../componentes/estilos/MadreCss.js"></script>
+    <script type="module" src="../componentes/estilos/HijaCss.js"></script>
+
+
+    <style>
+      p {
+        border: solid 1px blue;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <my-element>
+      <p>This is child content</p>
+    </my-element>
+    <simple-greeting></simple-greeting>
+    <h2>Propiedades</h2>
+    <mis-propiedades cadena="Mi Valor"></mis-propiedades>
+    <h2>Plantillas true</h2>
+    <mis-plantillas entradaPresenta="true">
+      <div>
+        <h3>Mi contenido Slot</h3>
+        <p slot="one">Include me in slot "one".</p>
+      </div>
+
+    </mis-plantillas>
+    <h2>Plantillas false</h2>
+    <mis-plantillas entradaPresenta="false">
+      <div>
+        <h3>Mi contenido Slot</h3>
+      </div>
+    </mis-plantillas>
+    <h2>Condicionales</h2>
+    <h3>mis-condicionales</h3>
+    <mis-condicionales></mis-condicionales>
+    <h3>mi-when</h3>
+    <mi-when></mi-when>
+    <h3>mi-choose</h3>
+    <mi-choose></mi-choose>
+    <h3>mi-choose section="home"</h3>
+    <mi-choose section="home"></mi-choose>
+    <h2>Bucles</h2>
+    <h3>Map</h3>
+    <mi-bucle></mi-bucle>
+    <h3>Repeat</h3>
+    <mi-repeat></mi-repeat>
+    <h3>Join</h3>
+    <mi-join></mi-join>
+    <h3>Range</h3>
+    <mi-range></mi-range>
+    <h3>Slots</h3>
+    <h4>Slot Simple</h4>
+    <mi-slot-simple>
+      <div>
+        <h6>Contenido del Slot</h6>
+      </div>
+    </mi-slot-simple>
+    <h4>Slot Complejo</h4>
+    <mi-slot-complejo>
+      <p slot="one">Include me in slot "one".</p>
+      <p slot="two">Include me in slot "two".</p>
+    </mi-slot-complejo>
+    <mi-slot-complejo></mi-slot-complejo>
+    <h4>Mi tabla slot complejo</h4>
+    <mi-otro-slot-complejo>
+      <h4>Antes</h4>
+      <div slot="header">
+        <h5>Header</h5>
+        <table>
+          <tr><td>hola</td></tr>
+        </table>
+      </div>
+      <div slot="footer">
+        Footer
+      </div>
+      <h4>Despues</h4>
+    </mi-otro-slot-complejo>
+
+    <h2>Uso Directivas</h2>
+    <h4>uso-directivas</h4>
+    <uso-directivas></uso-directivas>
+    <h4>uso-directivas sindefinir="hola"</h4>
+    <uso-directivas sindefinir="hola"></uso-directivas>
+    <h4>uso-directivas enable="false"</h4>
+    <uso-directivas enable="false"></uso-directivas>
+    <h2>Estilos</h2>
+    <mis-estilos></mis-estilos>
+    <h3>Estilos Externos</h3>
+    <carga-estilos></carga-estilos>
+    <h3>Shadow DOM</h3>
+    <mi-shadow-dom></mi-shadow-dom>
+    <mi-shadow-dom class="blue"></mi-shadow-dom>
+    <h3>Estilos Slots</h3>
+
+    <mis-estilos-slots>
+      <p>Stylable with ::slotted()</p>
+    </mis-estilos-slots>
+    <mis-estilos-slots>
+      <div><p>Not stylable with ::slotted()</p></div>
+    </mis-estilos-slots>
+    <mis-estilos-slots>
+      <div slot="hi"><p>Not stylable with ::slotted()</p></div>
+    </mis-estilos-slots>
+    <h3>Herencia de Estilos</h3>
+    <h4>Madre</h4>
+    <mi-madre></mi-madre>
+    <h4>Hija</h4>
+    <mi-hija></mi-hija>
+    <h2>Ciclos de Vida</h2>
+    <h4>Variables CSS</h4>
+    <mis-variables></mis-variables>
+    <mis-variables class="rainbow"></mis-variables>
+
+    <mis-ciclos-de-vida></mis-ciclos-de-vida>
+    <h2>Eventos</h2>
+    <mis-eventos></mis-eventos>
+    <h4>Eventos constructor</h4>
+    <mis-eventos-constructor></mis-eventos-constructor>
+    <h4>Dispatch Event</h4>
+    <mis-eventos-captura>
+      <mis-eventos-personalizados>
+
+      </mis-eventos-personalizados>
+    </mis-eventos-captura>
+    <h4>mis condiciones</h4>
+    <mis-condiciones></mis-condiciones>
+    <h4>mis listados</h4>
+    <mi-listado></mi-listado>
+    <h4>Mi slot chahi</h4>
+    <mi-slot-chachi>
+      <p slot="HEADER">Include me in slot "HEADER".</p>
+      <p slot="FOOTER">Include me in slot "FOOTER".</p>
+    </mi-slot-chachi>
+<h4>CssShadowDom</h4>
+<css-shadowdom></css-shadowdom>
+<css-shadowdom class="red"></css-shadowdom>
+<h4>madre</h4>
+<mi-madrecss></mi-madrecss>
+<h4>hija</h4>
+<mi-hijacss></mi-hijacss>
+<evento-constructor-cap>
+<evento-constructor>
+  
+</evento-constructor>
+
+</evento-constructor-cap>
+  </body>
+</html>
+
